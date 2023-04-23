@@ -1,14 +1,12 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from 'next/image';
+import styles from './page.module.css';
+import { Noto_Sans_Mono } from 'next/font/google';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
+        <p className="text-blue-600">
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
@@ -18,28 +16,13 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+            By <Image src="/vercel.svg" alt="Vercel Logo" className={styles.vercelLogo} width={100} height={24} priority />
           </a>
         </div>
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
         <div className={styles.thirteen}>
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
         </div>
@@ -52,12 +35,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
+          <h2 className="font-mono">
             Docs <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
+          <p>Find in-depth information about Next.js features and API.</p>
         </a>
 
         <a
@@ -66,10 +47,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
+          <h2 className="font-mono">
             Templates <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+          <p>Explore the Next.js 13 playground.</p>
         </a>
 
         <a
@@ -78,14 +59,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
+          <h2 className="font-mono">
             Deploy <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
         </a>
       </div>
     </main>
-  )
+  );
 }
